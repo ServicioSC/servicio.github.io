@@ -3,11 +3,477 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi página</title>
+    <title>Portal Académico</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Mi primera pagina web</h1>
-    <p>Esta es mi primera página web.</p>
+<div class="app">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-icon">
+                PA
+            </div>
+            <div>
+                <h2>Portal</h2>
+                <span>Académico</span>
+            </div>
+        </div>
+        <nav class="nav">
+            <button class="nav-item active" data-page="dashboard">
+                <span>Inicio</span>
+            </button>
+            <button class="nav-item" data-page="tasksPage">
+                <span>Tareas</span>
+            </button>
+            <button class="nav-item" data-page="submissionsPage">
+                <span>Entregas</span>
+            </button>
+            <button class="nav-item" data-page="profilePage">
+                <span>Mi perfil</span>
+            </button>
+        </nav>
+    </aside>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header-title">
+                Portal académico
+            </div>
+            <div class="user-area">
+                <div class="user-info">
+                    <div class="user-name">
+                        Joshua Cañas
+                    </div>
+                    <div class="user-role">
+                        Alumno
+                    </div>
+                </div>
+                <div class="avatar">
+                    JC
+                </div>
+            </div>
+        </header>
+        <!-- CONTENIDO -->
+        <div class="content">
+            <!-- DASHBOARD -->
+            <section id="dashboard" class="page active">
+                <div class="welcome">
+                    <h1>
+                        Bienvenido, Joshua
+                    </h1>
+                    <p>
+                        Aquí puedes consultar tus tareas
+                        y administrar tus entregas.
+                    </p>
+                </div>
+                <!-- ESTADÍSTICAS -->
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-label">
+                            Tareas pendientes
+                        </div>
+                        <div class="stat-number">
+                            2
+                        </div>
+                        <div class="stat-description">
+                            Requieren tu atención
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">
+                            Entregadas
+                        </div>
+                        <div class="stat-number">
+                            1
+                        </div>
+                        <div class="stat-description">
+                            En espera de revisión
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">
+                            Revisadas
+                        </div>
+                        <div class="stat-number">
+                            1
+                        </div>
+                        <div class="stat-description">
+                            Trabajos calificados
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">
+                            Promedio
+                        </div>
+                        <div class="stat-number">
+                            9.2
+                        </div>
+                        <div class="stat-description">
+                            Calificación actual
+                        </div>
+                    </div>
+                </div>
+                <!-- TAREAS RECIENTES -->
+                <div class="section">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            Tareas recientes
+                        </h2>
+                    </div>
+                    <div class="tasks">
+                        <!-- TAREA 1 -->
+                        <article class="task-card">
+                            <div class="task-top">
+                                <div>
+                                    <div class="task-title">
+                                        Proyecto de programación
+                                    </div>
+                                    <div class="task-description">
+                                        Desarrollar un programa utilizando
+                                        Python y entregar el código junto
+                                        con documentación.
+                                    </div>
+                                </div>
+                                <span class="status pending">
+                                    Pendiente
+                                </span>
+                            </div>
+                            <div class="deadline">
+                                Fecha límite:
+                                <strong>
+                                    15 septiembre 2026
+                                </strong>
+                            </div>
+                            <div class="task-footer">
+                                <span></span>
+                                <button
+                                    class="btn btn-primary"
+                                    data-submit-task="Proyecto de programación">
+                                    Entregar trabajo
+                                </button>
+                            </div>
+                        </article>
+                        <!-- TAREA 2 -->
+                        <article class="task-card">
+                            <div class="task-top">
+                                <div>
+                                    <div class="task-title">
+                                        Reporte de laboratorio
+                                    </div>
+                                    <div class="task-description">
+                                        Elaborar el reporte correspondiente
+                                        a la práctica de laboratorio.
+                                    </div>
+                                </div>
+                                <span class="status submitted">
+                                    Entregado
+                                </span>
+                            </div>
+                            <div class="deadline">
+                                Fecha límite:
+                                <strong>
+                                    20 septiembre 2026
+                                </strong>
+                            </div>
+                            <div class="task-footer">
+                                <span>
+                                    En revisión
+                                </span>
+                                <button class="btn btn-secondary">
+                                    Ver entrega
+                                </button>
+                            </div>
+                        </article>
+                        <!-- TAREA 3 -->
+                        <article class="task-card">
+                            <div class="task-top">
+                                <div>
+                                    <div class="task-title">
+                                        Análisis numérico
+                                    </div>
+                                    <div class="task-description">
+                                        Resolver el problema asignado
+                                        utilizando MATLAB.
+                                    </div>
+                                </div>
+                                <span class="status reviewed">
+                                    Revisado
+                                </span>
+                            </div>
+                            <div class="deadline">
+                                Fecha límite:
+                                <strong>
+                                    25 septiembre 2026
+                                </strong>
+                            </div>
+                            <div class="task-footer">
+                                <span>
+                                    Calificación:
+                                    <strong>9.5</strong>
+                                </span>
+                                <button class="btn btn-secondary">
+                                    Ver comentarios
+                                </button>
+                            </div>
+                        </article>
+                        <!-- TAREA 4 -->
+                        <article class="task-card">
+                            <div class="task-top">
+                                <div>
+                                    <div class="task-title">
+                                        Proyecto final
+                                    </div>
+                                    <div class="task-description">
+                                        Presentar el avance del proyecto
+                                        final del semestre.
+                                    </div>
+                                </div>
+                                <span class="status pending">
+                                    Pendiente
+                                </span>
+                            </div>
+                            <div class="deadline">
+                                Fecha límite:
+                                <strong>
+                                    30 septiembre 2026
+                                </strong>
+                            </div>
+                            <div class="task-footer">
+                                <span></span>
+                                <button
+                                    class="btn btn-primary"
+                                    data-submit-task="Proyecto final">
+                                    Entregar trabajo
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <!-- PÁGINA DE TAREAS -->
+            <section id="tasksPage" class="page">
+                <div class="welcome">
+                    <h1>
+                        Mis tareas
+                    </h1>
+                    <p>
+                        Consulta todas las actividades asignadas.
+                    </p>
+                </div>
+                <div class="tasks">
+                    <article class="task-card">
+                        <div class="task-title">
+                            Proyecto de programación
+                        </div>
+                        <div class="task-description">
+                            Desarrollo de aplicación en Python.
+                        </div>
+                        <div class="deadline">
+                            Fecha límite:
+                            15 septiembre 2026
+                        </div>
+                        <div class="task-footer">
+                            <span class="status pending">
+                                Pendiente
+                            </span>
+                            <button
+                                class="btn btn-primary"
+                                data-submit-task="Proyecto de programación">
+                                Entregar
+                            </button>
+                        </div>
+                    </article>
+                    <article class="task-card">
+                        <div class="task-title">
+                            Reporte de laboratorio
+                        </div>
+                        <div class="task-description">
+                            Reporte de la práctica realizada.
+                        </div>
+                        <div class="deadline">
+                            Fecha límite:
+                            20 septiembre 2026
+                        </div>
+                        <div class="task-footer">
+                            <span class="status submitted">
+                                Entregado
+                            </span>
+                            <button class="btn btn-secondary">
+                                Ver
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <!-- PÁGINA DE ENTREGAS -->
+            <section id="submissionsPage" class="page">
+                <div class="welcome">
+                    <h1>
+                        Mis entregas
+                    </h1>
+                    <p>
+                        Historial de trabajos entregados.
+                    </p>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Trabajo</th>
+                                <th>Fecha</th>
+                                <th>Estado</th>
+                                <th>Calificación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Proyecto de programación
+                                </td>
+                                <td>
+                                    12 septiembre 2026
+                                </td>
+                                <td>
+                                    <span class="status submitted">
+                                        En revisión
+                                    </span>
+                                </td>
+                                <td>
+                                    —
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Reporte de laboratorio
+                                </td>
+                                <td>
+                                    18 septiembre 2026
+                                </td>
+                                <td>
+                                    <span class="status reviewed">
+                                        Revisado
+                                    </span>
+                                </td>
+                                <td>
+                                    9.5
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <!-- PERFIL -->
+            <section id="profilePage" class="page">
+                <div class="welcome">
+                    <h1>
+                        Mi perfil
+                    </h1>
+                    <p>
+                        Información del usuario.
+                    </p>
+                </div>
+                <div class="task-card">
+                    <div class="form-group">
+                        <label class="form-label">
+                            Nombre
+                        </label>
+                        <input
+                            type="text"
+                            value="Joshua Cañas">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">
+                            Correo
+                        </label>
+                        <input
+                            type="email"
+                            value="alumno@example.com">
+                    </div>
+                    <button
+                        class="btn btn-primary"
+                        onclick="showNotification('Cambios guardados en modo demostración.')">
+                        Guardar cambios
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
+<!-- MODAL PARA ENTREGAR TRABAJO -->
+<div
+    class="modal-overlay"
+    id="submissionModal">
+    <div class="modal">
+        <div class="modal-header">
+            <div class="modal-title">
+                Entregar trabajo
+            </div>
+            <button class="close-modal">
+                ×
+            </button>
+        </div>
+        <form id="submissionForm">
+            <div class="form-group">
+                <label class="form-label">
+                    Nombre del alumno
+                </label>
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Escribe tu nombre"
+                    required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">
+                    Trabajo
+                </label>
+                <input
+                    type="text"
+                    id="taskName"
+                    readonly>
+            </div>
+            <div class="form-group">
+                <label class="form-label">
+                    Archivo
+                </label>
+                <label class="file-input">
+                    <input
+                        type="file"
+                        id="fileInput"
+                        accept=".pdf,.doc,.docx,.zip,.rar">
+                    <strong>
+                        Seleccionar archivo
+                    </strong>
+                    <div
+                        class="file-name"
+                        id="fileName">
+                        Ningún archivo seleccionado
+                    </div>
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="form-label">
+                    Comentario
+                </label>
+                <textarea
+                    placeholder="Comentario opcional...">
+                </textarea>
+            </div>
+            <button
+                type="submit"
+                class="btn btn-primary">
+                Enviar trabajo
+            </button>
+        </form>
+    </div>
+</div>
+<!-- NOTIFICACIÓN -->
+<div
+    id="notification"
+    class="notification">
+</div>
+<script src="script.js"></script>
 </body>
 </html>
